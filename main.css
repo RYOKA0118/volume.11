@@ -1,0 +1,68 @@
+body{
+    background: #efefef;
+    padding: 20px;
+}
+
+.menu {
+    display: flex;
+    list-style: none;
+}
+
+.menu li {
+    margin: 16px;
+}
+
+.wrap {
+    max-width: 600px;
+    margin: auto;
+    background: #ffffff;
+          display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+}
+
+.card-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 20px;
+}
+
+.card {
+    width: 100%;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    background: #ffffff;
+    margin-top: 20;
+}
+
+.card h2 {
+    font-size: 18px;
+    margin-top: 0;
+}
+
+.card p {
+    font-size: 14px;
+    margin-bottom: 0;
+}
+
+.card img {
+    width: 100%;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+.wrap {
+    max-width: 100%;
+    padding: 10px;
+}
+        /* 上段のカードに余白を追加 */
+        .card:nth-child(-n+3) {
+            margin-top: 20px;
+        }
+
+@media (max-width: 480px) {
+    .card-container {
+        grid-template-columns: 1fr; /* 画面幅が480px以下の場合にカードを1列にする */
+    }
